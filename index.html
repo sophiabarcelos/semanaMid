@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+  <canvas id="rain" aria-hidden="true"></canvas>
+
+  <main>
+    <div class="quiz-container">
+      
+      <!-- TELA INICIAL / CAPA -->
+      <div id="home-box" class="home-container">
+        <h1>Quiz: Tecnologia e Sustentabilidade</h1>
+        <p class="home-description">Teste seus conhecimentos e descubra como a tecnologia caminha junto com o meio ambiente!</p>
+        <button id="start-btn" class="btn-start">&gt; INICIAR QUIZ</button>
+      </div>
+
+      <!-- CAIXA DO QUIZ -->
+      <div id="quiz-box" class="hide">
+        <div id="question" class="question">Pergunta aqui</div>
+        <div id="options" class="options-container"></div>
+        
+        <!-- Caixa de explicação -->
+        <div id="explanation-box" class="explanation-box hide"></div>
+
+        <div class="controls">
+          <button id="next-btn" class="btn-next hide">&gt; PRÓXIMA</button>
+        </div>
+      </div>
+
+      <!-- CAIXA DE RESULTADO FINAL -->
+      <div id="result-box" class="result-container hide">
+        <p id="score-text"></p>
+
+        <!-- Div para quando acertar 3 ou mais -->
+        <div id="success-box" class="hide">
+          <p id="success-msg"></p>
+          <p id="success-msg2"></p>
+        </div>
+
+        <!-- Botão para tentar novamente -->
+        <button id="restart-btn" class="btn-restart hide">&gt; TENTE NOVAMENTE</button>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="java.js"></script>
+</body>
+</html>
