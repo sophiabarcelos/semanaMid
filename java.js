@@ -1,8 +1,6 @@
-// --- CHUVA DE CÓDIGOS (MATRIX BACKGROUND) ---
+// --- CHUVA DE CÓDIGOS 
 const canvas = document.querySelector("#rain");
 const ctx = canvas.getContext("2d");
-
-
 
 let columns = [];
 
@@ -45,7 +43,7 @@ resizeRain();
 drawRain();
 
 
-// --- LÓGICA DO QUIZ ---
+//  QUIZ 
 const questions = [
   {
     question: "1. O que é a chamada 'Tecnologia Verde'?",
@@ -114,6 +112,7 @@ const scoreText = document.getElementById('score-text');
 const successBox = document.getElementById('success-box');
 const successMsg = document.getElementById('success-msg');
 const successMsg2 = document.getElementById('success-msg2');
+const successMsg3 = document.getElementById('success-msg3'); 
 const successLink = document.getElementById('success-link');
 const restartButton = document.getElementById('restart-btn');
 
@@ -183,33 +182,21 @@ function selectAnswer(e) {
   nextButton.classList.remove('hide');
 }
 
-function startQuiz() {
-  homeBox.classList.add('hide');
-  resultBox.classList.add('hide');
-  successBox.classList.add('hide');
-  restartButton.classList.add('hide');
-  
-  quizBox.classList.remove('hide');
-  
-  currentQuestionIndex = 0;
-  score = 0;
-  showQuestion();
-}
-
 function showResult() {
   quizBox.classList.add('hide');
   resultBox.classList.remove('hide');
   scoreText.innerText = `Você acertou ${score} de ${questions.length} perguntas!`;
 
   if (score >= 3) {
-    // Se acertou 3 ou mais: mostra o sucesso e ESCONDE o botão de reiniciar
+    // Se acertou 3 ou mais: mostra o sucesso e as três mensagens
     successBox.classList.remove('hide');
     restartButton.classList.add('hide');
     
     successMsg.innerText = "Parabéns! Acesso liberado para a próxima etapa:";  
-    successMsg2.innerText = "ys-zcu-rorgi.bkxikr.gvv/:";  
+    successMsg2.innerText = "Chave: deslocar 6 letras pra frente ";  
+    successMsg3.innerText = "ys-zcu-rorgi.bkxikr.gvv/";
   } else {
-    // Se acertou menos de 3: ESCONDE o sucesso e mostra o botão de reiniciar
+    // Se acertou menos de 3: esconde o sucesso e mostra o botão de reiniciar
     successBox.classList.add('hide');
     restartButton.classList.remove('hide');
   }
